@@ -13,7 +13,7 @@ class CargoChina extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(40)),
       child: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
+        scrollDirection: Axis.horizontal,
         child: DataTable(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8),
