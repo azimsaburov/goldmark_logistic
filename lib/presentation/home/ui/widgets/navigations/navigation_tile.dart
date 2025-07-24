@@ -20,8 +20,8 @@ class NavigationTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () => onTap(),
+    return GestureDetector(
+      onTap:() => onTap,
       child: Container(
         padding: EdgeInsets.all(16),
         color: color,
