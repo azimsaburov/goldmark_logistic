@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 
 class NavigationTile extends StatelessWidget {
   final int index;
-  final Icon icon;
+  final Widget icon;
   final String title;
   final VoidCallback onTap;
   final Widget? onIconPressed;
+  final Color? color;
 
   const NavigationTile({
     super.key,
@@ -14,6 +15,7 @@ class NavigationTile extends StatelessWidget {
     required this.title,
     required this.index,
     this.onIconPressed,
+    this.color,
   });
 
   @override
@@ -21,8 +23,8 @@ class NavigationTile extends StatelessWidget {
     return InkWell(
       onTap: () => onTap(),
       child: Container(
-        padding: EdgeInsets.all(30),
-        color: const Color.fromARGB(230, 255, 255, 255),
+        padding: EdgeInsets.all(16),
+        color: color,
         child: Row(
           children: [
             icon,

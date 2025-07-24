@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:goldmark_logistic/constants/colors_const.dart';
 import 'package:goldmark_logistic/presentation/home/ui/widgets/navigation_menu.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -20,9 +21,10 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(240, 255, 255, 255),
+      backgroundColor: ColorsConst.backgroundColor,
       body: SafeArea(
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             NavigationMenu(),
             Expanded(child: Center(child: Text('Content'))),
