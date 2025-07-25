@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:goldmark_logistic/constants/colors_const.dart';
 import 'package:goldmark_logistic/presentation/home/ui/widgets/cargo/cargo_china.dart';
-import 'package:goldmark_logistic/presentation/home/ui/widgets/navigations/navigation_menu.dart';
+//import 'package:goldmark_logistic/presentation/home/ui/widgets/navigations/navigation_menu.dart';
+import 'package:goldmark_logistic/presentation/home/ui/widgets/navigations/test_nav.dart';
 import 'package:goldmark_logistic/presentation/home/ui/widgets/search/search.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -57,7 +58,10 @@ class _HomeScreenState extends State<HomeScreen> {
                             SizedBox(width: 16),
                             CircleAvatar(
                               backgroundColor: ColorsConst.avatar,
-                              child: Text('AU', style: TextStyle(color: ColorsConst.primary)),
+                              child: Text(
+                                'AU',
+                                style: TextStyle(color: ColorsConst.primary),
+                              ),
                             ),
                             SizedBox(width: 30),
                           ],
@@ -120,7 +124,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
-              Positioned(child: NavigationMenu()),
+              //Positioned(child: NavigationMenu()),
+              Positioned(top: 0, left: 0, child: TestNav()),
             ],
           ),
         ),
