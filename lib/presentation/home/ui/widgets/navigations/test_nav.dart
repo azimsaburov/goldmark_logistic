@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:goldmark_logistic/constants/colors_const.dart';
 import 'package:goldmark_logistic/constants/icon_path.dart';
 import 'package:goldmark_logistic/constants/images_path.dart';
 import 'package:goldmark_logistic/presentation/home/ui/widgets/navigations/navigation_tile.dart';
@@ -39,6 +40,8 @@ class TestNav extends StatelessWidget {
               ),
             ),
             ExpansionTile(
+              shape: Border.all(color: Colors.transparent),
+              backgroundColor: ColorsConst.backgroundColor,
               title: Text('Грузы'),
               leading: SvgPicture.asset(IconPaths.cargos),
               trailing: Icon(Icons.arrow_back_ios_new),
@@ -48,30 +51,40 @@ class TestNav extends StatelessWidget {
                   leading: SvgPicture.asset(IconPaths.cargos),
                   onTap: () {},
                 ),
-                ListTile(title: Text('Сортровка'), onTap: () {}, leading: SvgPicture.asset(IconPaths.sort),),
-                ListTile(title: Text('Отправка'), onTap: () {}, leading: SvgPicture.asset(IconPaths.dispatches),),
+                ListTile(
+                  title: Text('Сортровка'),
+                  onTap: () {},
+                  leading: SvgPicture.asset(IconPaths.sort),
+                ),
+                ListTile(
+                  title: Text('Отправка'),
+                  onTap: () {},
+                  leading: SvgPicture.asset(IconPaths.dispatches),
+                ),
               ],
             ),
             ExpansionTile(
+              backgroundColor: ColorsConst.backgroundColor,
+              shape: Border.all(color: Colors.transparent),
               title: Text('Посылки'),
+
               leading: SvgPicture.asset(IconPaths.percels),
-              trailing: Icon(Icons.arrow_back_ios_new),
-              children: <Widget>[
-                ListTile(
-                  title: Text('Посылка из США'),
-                  onTap: () {},
-                ),
+
+              trailing: Icon(Icons.arrow_back_ios_outlined),
+
+              children: [
+                ListTile(title: Text('Посылка из США'), onTap: () {}),
                 ListTile(title: Text('Сортровка'), onTap: () {}),
                 ListTile(title: Text('Отправка'), onTap: () {}),
               ],
             ),
             Divider(),
             NavigationTile(
-            icon: SvgPicture.asset(IconPaths.goOut),
-            onTap: () {},
-            title: 'Выход',
-            index: 6,
-          ),
+              icon: SvgPicture.asset(IconPaths.goOut),
+              onTap: () {},
+              title: 'Выход',
+              index: 6,
+            ),
           ],
         ),
       ),
